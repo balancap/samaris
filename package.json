@@ -1,0 +1,14 @@
+{
+  "name": "samaris",
+  "version": "0.0.1",
+  "description": "Home, but never really existed...",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "metalsmith": "^2.1.0"
+  }
+}
