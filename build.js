@@ -18,6 +18,14 @@ var siteBuild = metalsmith(__dirname)
   .source('./src')
   .destination('./build')
   // build plugins go here
+  .use(serve({
+    port: 8080,
+    verbose: true
+  }))
+  .use(watch({
+    pattern: '**/*',
+    livereload: true
+  }))
   .build(function (err) {
     if (err) {
       console.log(err);
