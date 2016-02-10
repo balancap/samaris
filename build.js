@@ -4,7 +4,7 @@ var metalsmith = require('metalsmith'),
   permalinks = require('metalsmith-permalinks'),
   serve = require('metalsmith-serve'),
   layouts = require('metalsmith-layouts'),
-  // paths = require('metalsmith-paths'),
+  paths = require('metalsmith-paths'),
   rootPath = require('metalsmith-rootpath'),
   inplace = require('metalsmith-in-place'),
   watch = require('metalsmith-watch'),
@@ -20,7 +20,21 @@ var siteBuild = metalsmith(__dirname)
   .source('./src')
   .destination('./build')
   // build plugins go here
+  .use(collections({
+    articles: {
+      pattern: 'publications/articles/*.md',
+      sortBy: 'year',
+      reverse: true
+    }
+  }))
   .use(rootPath())
+  .use(paths({
+    property: "paths"
+  }))
+  // .use(permalinks({
+  //   pattern: ':title',
+  //   relative: false
+  // }))
   .use(layouts({
     engine: 'handlebars',
     partials: 'partials'

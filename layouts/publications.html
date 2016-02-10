@@ -11,7 +11,26 @@
         <div class="col-md-10">
           
         <h2 id="publications">Publications</h2>
+        
+        <div class="panel-group" id="publication">
+        {{#each collections.articles}}
+        
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title"><a data-toggle="collapse" data-parent="#publication" href="#{{this.paths.name}}">{{title}}</a></h4>{{authors}}. <em>{{journal}}</em>, {{pages}}, <strong>{{year}}</strong>. {{#if arxiv}}[{{#if doi}}&nbsp;<a href="{{doi}}" target="_blank">DOI</a>&nbsp;|{{/if}} <a href="{{arxiv}}" target="_blank">arXiv</a>&nbsp;]{{/if}}
+            </div>
+            <div id="{{this.paths.name}}" class="panel-collapse collapse">
+              <div class="panel-body">
+                {{{this.contents}}}
+              </div>
+            </div>
+          </div>
+          
+        {{/each}}
+        </div>
+     
         {{{contents}}}
+        
         </div>
         
         <div class="col-md-2">

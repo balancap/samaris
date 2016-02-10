@@ -1,9 +1,9 @@
 ---
-title: Fine regularity of Lévy processes and linear (multi)fractional stable motion.
+title: Fine regularity of Levy processes and linear (multi)fractional stable motion.
 authors: Paul Balança
 journal: Electron. J. Probab.
 year: 2014
-pages: no:19: 101, 1-37
+pages: 'no:19: 101, 1-37'
 doi: http://dx.doi.org/10.1214/EJP.v19-3393
 arxiv: http://arxiv.org/abs/1302.3140
 ---
