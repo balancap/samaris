@@ -21,12 +21,8 @@ var siteBuild = metalsmith(__dirname)
   .destination('./build')
   // build plugins go here
   .use(rootPath())
-  // .use(paths({
-  //   property: "paths"
-  // }))
   .use(layouts({
     engine: 'handlebars',
-    // default: 'default.html',
     partials: 'partials'
   }))
   // Server and watch

@@ -2,6 +2,15 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Scroll spy + sidebar -->
+<script type='text/javascript'>//<![CDATA[
+  $(window).load(function(){
+  $('body').scrollspy({
+    target: '.bs-docs-sidebar',
+    offset: 40
+  });
+});//]]>
+</script>
 <!-- Additional js plugins -->
 <script src="{{rootPath}}js/bootstrap.min.js"></script>
 <script src="{{rootPath}}js/smooth-scroll.min.js"></script>
