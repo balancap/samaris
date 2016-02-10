@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{>header}}
+  
+  <body>
+    
+    {{>nav}}
+
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-10">
+        {{{contents}}}
+        </div>
+        
+        <div class="col-md-2">
+          <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
+            <ul id="sidebar" class="nav nav-stacked fixed">
+              <li><a data-scroll href="#anchor-top"><i class="fa fa-arrow-up"></i></a></li>
+              <li><a data-scroll href="#who">Who I am?</a></li>
+              <li><a data-scroll href="#research">What I enjoy working on?</a></li>
+              <li><a data-scroll href="#articles" >What I wrote?</a></li>
+              <li><a data-scroll href="#conferences">Where I have been?</a></li>
+              <li><a data-scroll href="#teaching">What I have been teaching?</a></li>
+              <li><a data-scroll href="#anchor-bottom"><i class="fa fa-arrow-down"></i></a></li>
+              
+              <!-- <li>
+                <a href="#GroupC">Group C</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#GroupCSub1">Sub-Group 1</a></li>
+                  <li><a href="#GroupCSub2">Sub-Group 2</a></li>
+                </ul>
+              </li> -->
+            </ul>
+          </nav>
+        </div>
+        
+      </div>
+    </div>
+    {{>footer}}
+  </body>
+  </html>

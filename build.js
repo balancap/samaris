@@ -4,6 +4,8 @@ var metalsmith = require('metalsmith'),
   permalinks = require('metalsmith-permalinks'),
   serve = require('metalsmith-serve'),
   layouts = require('metalsmith-layouts'),
+  // paths = require('metalsmith-paths'),
+  rootPath = require('metalsmith-rootpath'),
   inplace = require('metalsmith-in-place'),
   watch = require('metalsmith-watch'),
   moment = require('moment');
@@ -18,6 +20,16 @@ var siteBuild = metalsmith(__dirname)
   .source('./src')
   .destination('./build')
   // build plugins go here
+  .use(rootPath())
+  // .use(paths({
+  //   property: "paths"
+  // }))
+  .use(layouts({
+    engine: 'handlebars',
+    // default: 'default.html',
+    partials: 'partials'
+  }))
+  // Server and watch
   .use(serve({
     port: 8080,
     verbose: true
