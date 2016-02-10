@@ -1,7 +1,7 @@
 ---
 title: Uniform multifractal structure of stable trees.
 authors: Paul Balança
-journal: Preprint
+journal: Submitted
 year: 2016
 pages: pp 1-50
 arxiv: http://arxiv.org/abs/1508.00229
