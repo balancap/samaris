@@ -22,7 +22,7 @@
     padding: 4px 20px;
     /*font-family: Oswald;*/
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* nested links */
@@ -46,7 +46,7 @@
 .bs-docs-sidebar .nav>.active>a,
 .bs-docs-sidebar .nav>.active:hover>a,
 .bs-docs-sidebar .nav>.active:focus>a {
-    font-weight: 600;
+    font-weight: 500;
 }
 /* nested active links */
 .bs-docs-sidebar .nav .nav>.active>a,
@@ -81,6 +81,9 @@ article .share .twitter:hover {
     color: #1D87BD;
 }
 #contact-list li:hover .fa-envelope {
+    color: #b72020;
+}
+#contact-list li:hover .fa-at {
     color: #b72020;
 }
 #contact-list li:hover .ai-researchgate {
@@ -121,7 +124,7 @@ article .share .gplus:hover {
           user-select: none;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 .btn-ct:focus,
 .btn-ct:active:focus,
