@@ -1,5 +1,6 @@
 var metalsmith = require('metalsmith'),
-  less = require('metalsmith-less'),
+  branch = require('metalsmith-branch'),
+  headings = require('metalsmith-headings'),
   collections = require('metalsmith-collections'),
   markdown = require('metalsmith-markdown'),
   permalinks = require('metalsmith-permalinks'),
@@ -21,14 +22,24 @@ var siteBuild = metalsmith(__dirname)
   .source('./src')
   .destination('./build')
   // build plugins go here
-  .use(collections({
-    articles: {
-      pattern: 'publications/articles/*.md',
-      sortBy: 'year',
-      reverse: true
-    }
-  }))
+  // .use(headings('h1'))
   .use(rootPath())
+  .use(branch('publications/articles/*.md')
+    .use(collections({
+      articles: {
+        pattern: 'publications/articles/*.md',
+        sortBy: 'year',
+        reverse: true
+      }
+    }))
+  )
+  .use(branch('!publications/articles/*.md')
+    .use(markdown({
+      smartypants: true,
+      gfm: true,
+      tables: true
+    }))
+  )
   .use(paths({
     property: "paths"
   }))
@@ -57,3 +68,4 @@ var siteBuild = metalsmith(__dirname)
       console.log('Site build complete!');
     }
   });
+  

@@ -7,4 +7,4 @@ title: Research
   - {id: publications, text: Publications}
 -->
 
-Hum hum...
+### Coming soon!
