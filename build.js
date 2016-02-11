@@ -1,4 +1,5 @@
 var metalsmith = require('metalsmith'),
+  less = require('metalsmith-less'),
   collections = require('metalsmith-collections'),
   markdown = require('metalsmith-markdown'),
   permalinks = require('metalsmith-permalinks'),
