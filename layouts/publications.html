@@ -8,7 +8,11 @@
     <div class="container">
       <div class="row">
         
-        <div class="col-md-10">
+        <div class="hidden-xs col-sm-3">
+        {{>sidebar}}
+        </div>
+        
+        <div class="col-sm-9">
           
         <h2 id="publications">Publications</h2>
         
@@ -30,11 +34,6 @@
         </div>
      
         {{{contents}}}
-        
-        </div>
-        
-        <div class="col-md-2">
-        {{>sidebar}}
         </div>
         
       </div>

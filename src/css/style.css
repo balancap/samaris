@@ -3,6 +3,10 @@
 .fixed {
     position: fixed;
 }
+.nopadding {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+}
 
 /* sidebar */
 .bs-docs-sidebar {
